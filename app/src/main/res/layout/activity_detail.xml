@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@null"
+        app:title="Detail"
+        app:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/detailImage"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_toolbar"
+        tools:src="@color/cardview_dark_background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_title_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/detailImage"
+        app:layout_constraintTop_toTopOf="@+id/detailImage"
+        tools:text="Title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_date_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_rating_detail"
+        app:layout_constraintEnd_toEndOf="@+id/text_title_detail"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="@+id/text_title_detail"
+        app:layout_constraintTop_toBottomOf="@+id/text_title_detail"
+        tools:text="Date" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_title_rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/rating"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/detailImage"
+        app:layout_constraintStart_toStartOf="@+id/text_date_detail" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_rating_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:maxLines="2"
+        android:textColor="#FFEB3B"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/text_title_rating"
+        app:layout_constraintEnd_toEndOf="@+id/text_date_detail"
+        app:layout_constraintStart_toEndOf="@+id/text_title_rating" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/text_rating_detail"
+        app:layout_constraintStart_toStartOf="@+id/detailImage"
+        app:layout_constraintTop_toBottomOf="@+id/detailImage"
+        tools:text="@tools:sample/lorem/random" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/favorite"
+        app:fabCustomSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="30dp"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

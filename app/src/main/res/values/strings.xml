@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MySubMADE</string>
+    <string name="title_favorite">Favorite</string>
+
+    <string name="error">Error 404</string>
+    <string name="favorite">Favorite</string>
+    <string name="no_data">No Data</string>
+    <string name="rating">Rating: </string>
+    <string name="loadingSC">XXI</string>
+
+    <string name="ui_mode">UI Mode</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+
+</resources>
